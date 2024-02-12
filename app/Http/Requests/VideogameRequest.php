@@ -25,7 +25,8 @@ class VideogameRequest extends FormRequest
             "title"=>'required',
             "year"=>'max_digits:4',
             "author"=>'required',
-            "description"=>'required'
+            "description"=>'required',
+            "img"=>'required|image'
     
         ];
     }
@@ -37,9 +38,11 @@ return[
     "title.required"  => "Ricordati di inserire il titolo",
     "year.numeric"  => "Non siamo nell'antica Roma, gli anni vanno con i numeri",
     "year.max_digits"  => "Non puoi inserire più di 4 caratteri",
-    "title.required"  => "Ricordati di inserire il titolo"
-
-
+    "title.required"  => "Ricordati di inserire il titolo",
+    "author.required"  => "Ricordati di inserire l'autore",
+    "description.required"  => "Ricordati di inserire la descrizione",
+    "img.required" => "Devi inserire una immagine di copertina",
+    "img.image"=> "Devi inserire file con soli questi formati jpn, jpeg, png, bpm, gif, svg, or webp"
 ];
 
     }

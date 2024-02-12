@@ -31,3 +31,14 @@ Route::get("/videogame/index",[VideogameController::class, "videogameIndex"])->n
 // Rotta parametrica per il dettaglio del videogioco 
 
 Route::get("/videogame/detail/{videogame}",[VideogameController::class,"videogameDetail"])->name("videogame.detail");
+
+// Rotta di tipo get per il form di aggiornamento 
+Route::get("/videogame/edit/{videogame}",[VideogameController::class,"videogameEdit"])->name("videogame.edit");
+
+// Rotta di tipo put che prende tutta la risorsa videogioco e poi sovrascrive 
+
+Route::put("/videogame/update/{videogame}",[VideogameController::class,"videogameUpdate"])->name("videogame.update");
+
+// Rotta per la cancellazione della risorsa videogame e della distruzione totale del record dentro il DB
+
+Route::delete("/videogame/destroy/{videogame}",[VideogameController::class,"videogameDestroy"])->name("videogame.destroy");

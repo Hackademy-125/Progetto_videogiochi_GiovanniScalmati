@@ -7,8 +7,8 @@
                     
                         @foreach ($videogames as $videogame)
                         <div class="col-md-4">
-                        <div class="card"  >
-                            <img src="https://picsum.photos/200" class="card-img-top" alt="immagine-casuale">
+                        <div class="card my-3"  >
+                            <img src="{{Storage::url($videogame->img)}}" class="card-img-top" alt="immagine-casuale">
                             <div class="card-body">
                               <h5 class="card-title">Title: {{$videogame->title}}</h5>
                               <h5 class="card-title">Author: {{$videogame->author}}</h5>
